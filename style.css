@@ -1,0 +1,119 @@
+/* style.css */
+
+/* Body background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Login box */
+.box {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.box h2 {
+  margin-bottom: 30px;
+  color: #1e3c72;
+}
+
+/* Inputs */
+.box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.box input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px #1e3c72;
+}
+
+/* Button */
+.box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.box button:hover {
+  opacity: 0.85;
+}
+
+/* Register link */
+.box p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.box a {
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+/*new animation hai ye*/
+/* Button base */
+.box button {
+  position: relative;
+  overflow: hidden; /* important for animation */
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3c72; /* base color */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Pseudo element for "water fill" effect */
+.box button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* start from bottom */
+  width: 100%;
+  height: 0%; /* initially empty */
+  background: rgba(53, 46, 46, 0.315); /* light overlay like water */
+  z-index: 0;
+  transition: height 0.4s ease-in-out;
+  border-radius: 8px;
+}
+
+/* On hover, "fill" the button */
+.box button:hover::after {
+  height: 100%; /* fill from bottom to top */
+}
+
+/* Text stays on top */
+.box button span {
+  position: relative;
+  z-index: 1;
+}

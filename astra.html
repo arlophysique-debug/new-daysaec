@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Astra Search V4</title>
+        <link rel="stylesheet" href="astra.css">
+    </head>
+
+
+    <body>  
+        
+        <!-- Background video search engin k liye -->
+
+        <video autoplay loop muted id="bg-video">
+            <source src="black1.mp4" type="video/mp4">
+        </video>
+
+        <!-- stars layering -->
+
+        <canvas id="starsCanvas"></canvas>
+           
+         
+        <!-- 🎧 ✅ STEP 1: Audio Files Add karo -->
+    
+        <audio id="clickSound" src="click.mp3"></audio>
+        <audio id="scrollSound" src="whoosh.mp3"></audio>
+        <audio id="hoverSound" src="hover.wav"></audio>
+        <audio id="typeSound" src="type.mp3"></audio>
+        <audio id="cursorSound" src="cursor.mp3"></audio>
+
+        <header>
+            <nav>
+                <div class="logo">ASTRA</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">AI</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+
+        <section class="hero">
+            <h1>Search the Universe</h1>
+            <p>The next generation search experience</p>
+            <div class="search">
+                <input id="q" placeholder="Search anything...">
+                <button onclick="go()">Search</button>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+
+        <section id="features" class="features">
+            <h2>AI Powered Features</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Smart Search</h3>
+                    <p>Find results instantly with intelligent ranking.</p>
+                </div>
+                <div class="card">
+                    <h3>Galaxy Explore</h3>
+                    <p>Discover the universe with immersive visuals.</p>
+                </div>
+                <div class="card">
+                    <h3>Future AI</h3>
+                    <p>Next generation AI assisted browsing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPLORE -->
+
+        <section id="explore" class="explore">
+            <h2>Explore the Space</h2>
+            <p>
+                Navigate through futuristic interface and discover knowledge like never before.
+            </p>
+        </section>
+
+        <!-- ABOUT -->
+
+        <section id="about" class="about">
+            <h2>About Astra</h2>
+            <p>
+                Astra is a futuristic search interface combining Apple level UI
+                with cinematic Marvel inspired design.
+            </p>
+        </section>
+
+        <footer>
+            <p>© Astra Search Engine</p>
+        </footer>
+        
+        <canvas id="web"></canvas>
+        <script src="astra.js"></script>
+    </body>
+</html>

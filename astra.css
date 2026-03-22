@@ -1,0 +1,217 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+position:fixed;
+width:100%;
+top:0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+opacity:.7;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:20px;
+text-align:center;
+}
+
+.hero h1{
+  font-size:70px;
+  font-weight:700;
+  letter-spacing:2px;
+
+  background: linear-gradient(90deg,#ffffff,#8ec5ff,#ffffff);
+  -webkit-background-clip:text;
+  color:transparent;
+
+  text-shadow: 0 0 20px rgba(255,255,255,0.2);
+
+  opacity:0;
+  transform: translateY(80px);
+  animation: fadeUp 1.5s ease forwards, glowText 3s infinite ease-in-out;
+}
+
+/* SEARCH */
+
+.search{
+
+display:flex;
+gap:10px;
+padding:16px 20px;
+
+background:rgba(0,0,0,0.4);
+border-radius:40px;
+backdrop-filter:blur(20px);
+box-shadow:0 0 20px rgba(0,0,0,0.5)
+
+}
+
+.search input{
+
+border:none;
+background:none;
+outline:none;
+color:white;
+font-size:16px;
+}
+
+.search button{
+
+background:linear-gradient(45deg,#4ea1ff,#7b5cff);
+border:none;
+padding:10px 20px;
+border-radius:30px;
+color:white;
+cursor:pointer;
+
+}
+
+/* FEATURES */
+
+.features{
+padding:150px 60px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+gap:40px;
+margin-top:40px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+
+width:250px;
+padding:30px;
+background:rgba(255,255,255,.05);
+border-radius:20px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 20px 50px rgba(0,0,0,.6);
+
+}
+
+/* EXPLORE */
+
+.explore{
+padding:150px 60px;
+text-align:center;
+}
+
+/* ABOUT */
+
+.about{
+padding:150px 60px;
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+opacity:.6;
+}
+
+/* CURSOR */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+z-index: 1;
+}
+
+/*✅ ADD (Animation keyframes)*/
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowText{
+  0%{
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+  50%{
+    text-shadow: 0 0 30px rgba(142,197,255,0.8);
+  }
+  100%{
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+}
+
+
+/*background video css edit*/
+
+#bg-video{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  z-index:-1;
+}
+
+
+/* CONTENT ऊपर */
+header, .hero, .features, .explore, .about, footer{
+  position: relative;
+  z-index:1;
+}
+
+/*stars css */
